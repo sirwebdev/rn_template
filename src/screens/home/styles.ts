@@ -5,7 +5,7 @@ const primaryColor = "#5c01e8"
 
 export const HomeScreenView = styled.ScrollView`
   width: 100%;
-  padding: 32px;
+  padding: 16px;
 `;
 
 export const HeaderView = styled.View`

@@ -1,10 +1,11 @@
-import { HomeScreen } from "./screens/home"
-import { SafeArea } from "./styles/safe-area"
+import { NavigationContainer } from "@react-navigation/native"
+
+import { StackNavigationProvider } from "./navigation/stack"
 
 export const App = () => {
   return (
-    <SafeArea>
-      <HomeScreen />
-    </SafeArea>
+    <NavigationContainer>
+      <StackNavigationProvider />
+    </NavigationContainer>
   )
 }
