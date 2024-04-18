@@ -1,11 +1,11 @@
 import { NavigationContainer } from "@react-navigation/native"
 
-import { StackNavigationProvider } from "./navigation/stack"
+import { StackNavigation } from "./navigation/stack"
 
 export const App = () => {
   return (
     <NavigationContainer>
-      <StackNavigationProvider />
+      <StackNavigation />
     </NavigationContainer>
   )
 }
