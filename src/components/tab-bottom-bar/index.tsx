@@ -1,6 +1,6 @@
 import { BottomTabBarProps } from "@react-navigation/bottom-tabs"
 import { ButtonText, TabBottomBarView, TabBottonButton } from "./style"
-import { Fingerprint, House } from "phosphor-react-native"
+import { Fingerprint, Folder } from "phosphor-react-native"
 import { BOTTON_TAB_NAVIGATION } from "../../navigation/bottom-tab"
 
 export const primaryColor = "#5c01e8"
@@ -25,7 +25,7 @@ export const TabBottomBar = ({ navigation, state }: BottomTabBarProps) => {
   return (
     <TabBottomBarView>
       <TabBottonButton onPress={() => handleNavigateTo(BOTTON_TAB_NAVIGATION.FOLDER_MEANING)}>
-        <House size={22} weight="bold" color={getIconColor(BOTTON_TAB_NAVIGATION.FOLDER_MEANING)} />
+        <Folder size={22} weight="bold" color={getIconColor(BOTTON_TAB_NAVIGATION.FOLDER_MEANING)} />
         <ButtonText isActive={isActive(BOTTON_TAB_NAVIGATION.FOLDER_MEANING)}>Folders</ButtonText>
       </TabBottonButton>
 
