@@ -1,21 +1,28 @@
 import { useCallback } from "react";
 import { View } from "react-native";
-import { CaretLeft, Function, RoadHorizon, Lightbulb, PuzzlePiece, ShareNetwork, WebhooksLogo } from "phosphor-react-native";
+import {
+  CaretLeft,
+  Function,
+  RoadHorizon,
+  Lightbulb,
+  PuzzlePiece,
+  ShareNetwork,
+  WebhooksLogo
+} from "phosphor-react-native";
 import { NavigationProp, ParamListBase } from "@react-navigation/native";
 
-import { SafeArea } from "../../styles/safe-area"
-import { AboutScreenView, HeaderButton, SectionTitle, SectionView, primaryColor } from "./style"
-
+import { SafeArea } from "../../styles/safe-area";
+import { AboutScreenView, HeaderButton, SectionTitle, SectionView, primaryColor } from "./style";
 import { SectionItem } from "./components/section-item";
 
 interface AboutScreenProps {
-  navigation: NavigationProp<ParamListBase>
+  navigation: NavigationProp<ParamListBase>;
 }
 
 export const FolderMeaningScreen = ({ navigation }: AboutScreenProps) => {
   const handleGoBack = useCallback(() => {
-    navigation.goBack()
-  }, [])
+    navigation.goBack();
+  }, [navigation]);
 
   return (
     <SafeArea>
@@ -28,7 +35,7 @@ export const FolderMeaningScreen = ({ navigation }: AboutScreenProps) => {
 
         <SectionView
           contentContainerStyle={{
-            gap: 16
+            gap: 16,
           }}
           showsVerticalScrollIndicator={false}
         >
@@ -36,77 +43,41 @@ export const FolderMeaningScreen = ({ navigation }: AboutScreenProps) => {
 
           <SectionItem
             title="Components"
-            description="Component's folder are the global components used in more than 3 screens/component."
-            icon={
-              <PuzzlePiece
-                size={32}
-                weight="bold"
-                color={primaryColor}
-              />
-            }
+            description="This folder contains globally reusable components that are used across three or more screens or other components."
+            icon={<PuzzlePiece size={32} weight="bold" color={primaryColor} />}
           />
 
           <SectionItem
             title="Screens"
-            description="Have all Component related at Screen, and each screen's folder may have or not a component folder one to organiaze the main screen component"
-            icon={
-              <Lightbulb
-                size={32}
-                weight="bold"
-                color={primaryColor}
-              />
-            }
+            description="This folder stores all screen-specific components. Each screen folder may contain a subfolder for organizing components that are exclusive to that particular screen."
+            icon={<Lightbulb size={32} weight="bold" color={primaryColor} />}
           />
 
           <SectionItem
             title="Services"
-            description="Here we can have all integrations and custom services for all application"
-            icon={
-              <Function
-                size={32}
-                weight="bold"
-                color={primaryColor}
-              />
-            }
+            description="Services folder houses all the integration logic and custom services utilized throughout the application."
+            icon={<Function size={32} weight="bold" color={primaryColor} />}
           />
 
           <SectionItem
             title="Providers"
-            description="Have all providers from React Native"
-            icon={
-              <RoadHorizon
-                size={32}
-                weight="bold"
-                color={primaryColor}
-              />
-            }
+            description="Contains all context providers used in the application, facilitating state management across different components and screens."
+            icon={<RoadHorizon size={32} weight="bold" color={primaryColor} />}
           />
 
           <SectionItem
             title="Hooks"
-            description="Have all from React an it can be a React Native or custom one"
-            icon={
-              <WebhooksLogo
-                size={32}
-                weight="bold"
-                color={primaryColor}
-              />
-            }
+            description="Includes custom hooks and those provided by React, enhancing functionality with reusable logic blocks."
+            icon={<WebhooksLogo size={32} weight="bold" color={primaryColor} />}
           />
 
           <SectionItem
             title="Navigations"
-            description="Navigation contains all route navigation from application"
-            icon={
-              <ShareNetwork
-                size={32}
-                weight="bold"
-                color={primaryColor}
-              />
-            }
+            description="Manages all routing and navigation logic, defining the navigational structure of the application."
+            icon={<ShareNetwork size={32} weight="bold" color={primaryColor} />}
           />
         </SectionView>
       </AboutScreenView>
     </SafeArea>
-  )
-}
+  );
+};

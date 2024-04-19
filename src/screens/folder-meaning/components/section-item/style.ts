@@ -5,7 +5,7 @@ export const SectionItemView = styled.View`
   width: 100%;
   flex-direction: row;
 
-  gap:8px;
+  gap:16px;
   align-items: center;
 `;
 
@@ -21,4 +21,6 @@ export const DescriptionTitle = styled.Text`
   font-size: 16px;
 `;
 
-export const DescriptionText = styled.Text``;
+export const DescriptionText = styled.Text`
+  width: 85%;
+`;
