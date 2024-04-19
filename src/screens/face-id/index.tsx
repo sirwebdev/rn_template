@@ -78,17 +78,17 @@ export const FaceIDScreen = ({ navigation }: FaceIDScreenProps) => {
 
         await handleAuthenticateWithFaceID(userId, rnBiometrics)
       })
-    }
+    } else {
+      if (biometryType !== BiometryTypes.FaceID) {
+        Alert.alert(
+          'Oops!',
+          'Face ID is not available on this device.',
+        );
+        return;
+      }
 
-    if (biometryType !== BiometryTypes.FaceID) {
-      Alert.alert(
-        'Oops!',
-        'Face ID is not available on this device.',
-      );
-      return;
+      await handleAuthenticateWithFaceID(userId, rnBiometrics)
     }
-
-    await handleAuthenticateWithFaceID(userId, rnBiometrics)
   }, [])
 
   return (
